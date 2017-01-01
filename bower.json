@@ -1,0 +1,11 @@
+{
+  "name": "track-order",
+  "description": "Track Order",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "angular": "1.6.x",
+    "angular-route": "1.5.x",
+	"jquery": "2.2.x"
+  }
+}
