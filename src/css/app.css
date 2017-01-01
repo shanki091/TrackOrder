@@ -250,6 +250,8 @@ blockquote:before, blockquote:after, q:before, q:after {
 	color: #828282 !important;
 	vertical-align: middle;
 	font-size: 14px;
+	float:left;
+	display:inline-block;
 }
 
 .order-detail-box  li div:nth-child(even) {

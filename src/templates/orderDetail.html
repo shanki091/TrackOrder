@@ -1,0 +1,30 @@
+<div class="order-detail">
+	<div class="row">
+		<div
+			class="col-lg-offset-6 col-lg-6 col-md-offset-4 col-md-8 col-sm-offset-4 col-sm-8 col-xs-12">
+			<div class="order-detail-box">
+				<div class="panel-title">
+					<h3>Order Tracking Detail</h3>
+				</div>
+				<div class="panel-body">
+					<ul>
+						<li>
+							<div>
+								<span>{{trackOrder.latest_status.date}}</span><br>
+								<span>{{trackOrder.latest_status.time}}</span>
+							</div>
+							<div>{{trackOrder.latest_status.message}}</div>
+						</li>
+						<li ng-repeat="scan in trackOrder.scans | orderBy:'timeStamp':true"
+							ng-show="{{!scan.isLatest}}">
+							<div>
+								<span>{{scan.date}}</span><br>
+								<span>{{scan.time}}</span>
+							</div>
+							<div>{{scan.message}}</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>

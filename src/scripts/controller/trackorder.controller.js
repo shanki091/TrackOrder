@@ -18,7 +18,7 @@ trackOrder.controller(
 							angular.forEach(trackOrder.scans, function(scan, i) {
 								 scan.date = trackOrderService.getStandardDate(scan.timestamp);
 								 scan.time = trackOrderService.getStandardTime(scan.timestamp);
-								 scan.timeStamp = new Date(scan.timestamp).getTime();
+								 scan.timeStamp = new Date(scan.timestamp);
 								 
 								 scan.message = (scan.location !== 'None') ? scan.remark + ' ' + scan.location : scan.remark;
 								 scan.iconClass = (scan.status === 'Delivered') ? 'fa-3x fa-check-circle' : 'fa-2x fa-circle';
@@ -36,7 +36,7 @@ trackOrder.controller(
 						 			var scan = {
 						 					status : 'Received',						 					
 						 					iconClass : 'fa-2x fa-circle fa-disabled',
-						 			        timeStamp : new Date().getTime(),
+						 			        timeStamp : new Date(),
 						 			        isLatest :true
 						 			}
 						 			trackOrder.scans.push(scan);
@@ -44,7 +44,7 @@ trackOrder.controller(
 						 		trackOrder.latest_status.message = (trackOrder.latest_status.location !== 'None') ?  trackOrder.latest_status.remark + ' ' + trackOrder.latest_status.location : trackOrder.latest_status.remark;
 						 		trackOrder.latest_status.date = trackOrderService.getStandardDate(trackOrder.latest_status.timestamp);
 						 		trackOrder.latest_status.time = trackOrderService.getStandardTime(trackOrder.latest_status.timestamp);
-						 		trackOrder.latest_status.timeStamp = new Date(trackOrder.latest_status.timestamp).getTime();
+						 		trackOrder.latest_status.timeStamp = new Date(trackOrder.latest_status.timestamp);
 						 	}
 						 	 trackOrder.progressBlockWidth = 100 / trackOrder.scans.length + '%';
 							 $scope.trackOrder = trackOrder;

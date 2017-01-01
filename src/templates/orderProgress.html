@@ -1,0 +1,29 @@
+<div class="order-progress">
+	<div class="panel-title">
+		<h3 class="title">
+			<span ng-show="{{customerInfo.title}}"><img
+				src="{{customerInfo.iconLink}}" alt="{{customerInfo.title}}" /><strong>{{customerInfo.title}}
+					:</strong></span>&nbsp;Order Tracking
+		</h3>
+	</div>
+	<div class="panel-body">
+		<div>
+			<h4>
+				<Strong>Order:</Strong>&nbsp <span>{{trackOrder.id}}</span>
+			</h4>
+			<div class="order-sataus">
+				<strong>Status:</strong> <span class="{{trackOrder.statusClass}}">{{trackOrder.latest_status.status}}</span>
+			</div>
+		</div>
+		<div class="status-progress-bar">
+			<ul>
+				<li style="width: {{trackOrder.progressBlockWidth}}"
+					ng-repeat="scan in trackOrder.scans | orderBy:'timeStamp'"><i
+					class="fa {{scan.iconClass}} fa-fw"></i>
+					<div class="order-status" aria-hidden="false">{{scan.status}}</div>
+					<div class="order-status-time" aria-hidden="false" class="">{{scan.date}}</div>
+					<div class="order-status-time" aria-hidden="false" class="">{{scan.time}}</div>
+				</li>
+			</ul>
+		</div>
+	</div>
