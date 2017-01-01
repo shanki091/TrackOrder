@@ -8,14 +8,14 @@ Step 1 - Install Node
 Install Node
 ```
 
-Step2 -  Install dependencies
+Step 2 -  Install dependencies
 
 Run Command -
 ```
 npm insall
 ```
 
-Step3 - Run App
+Step 3 - Run App
 
 Run command-
 
