@@ -6,8 +6,6 @@ module.exports = function(config) {
 
     files: [
       'bower_components/angular/angular.js',
-      'bower_components/angular-route/angular-route.js',
-	  'bower_components/jquery/src/jquery.js',
       '**/*.module.js',
       '*!(.module|.spec).js',
       '!(bower_components)/**/*!(.module|.spec).js',
